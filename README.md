@@ -1,6 +1,8 @@
 # react-flow-demo-app
 
-基于 `React Flow` 构建流程图，可拖拽添加节点，并通过 `useContext` 实现了简易的状态管理
+基于 `react-flow-renderer` 构建流程图，可拖拽添加节点。
+
+文章地址：[https://blog.csdn.net/m0_73117087/article/details/133357124](https://blog.csdn.net/m0_73117087/article/details/133357124)
 
 参考文章地址：[https://www.cnblogs.com/wisewrong/p/15638354.html](https://www.cnblogs.com/wisewrong/p/15638354.html)
 
