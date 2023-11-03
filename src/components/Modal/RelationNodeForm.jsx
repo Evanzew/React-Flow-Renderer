@@ -1,12 +1,12 @@
 import React, { useEffect, useImperativeHandle } from "react";
 import { useForm } from "react-hook-form";
 import { FormContainer, TextFieldElement, TextareaAutosizeElement } from "react-hook-form-mui";
-import { CLOSE_RULE_CHAIN_MODAL, SET_RULE_CHAIN_NODE } from '../../store/constant';
+import { CLOSE_RULE_CHAIN_MODAL } from '../../store/constant';
 import { useNodes, useReactFlow } from 'react-flow-renderer';
 import { connect, useDispatch } from 'react-redux';
 
 function RelationNodeForm(props) {
-  const { modalConfig, events, nodes } = props
+  const { modalConfig, events } = props
 
   const { setNodes } = useReactFlow(); // 使用useReactFlow钩子获取setNodes函数
   const flowNodes = useNodes(); // 使用useNodes钩子获取当前节点列表
@@ -33,14 +33,6 @@ function RelationNodeForm(props) {
     // 获取表单数据
     const data = formContext.watch();
     const { name, remark } = data
-
-    // 更新节点对象并分发action
-    dispatch({
-      type: SET_RULE_CHAIN_NODE,
-      data: nodes.map((node) =>
-        node.id === modalConfig.node.id ? { ...node, data: { ...node.data, name, remark } } : node
-      )
-    });
 
     // 更新节点数组
     setNodes(
@@ -91,11 +83,10 @@ function RelationNodeForm(props) {
 
 // redux获取当前flow的数据
 const mapStateToProps = (state) => {
-  const { modalConfig, nodes } = state.ruleChainReducer;
+  const { modalConfig } = state.ruleChainReducer;
 
   return {
-    modalConfig,
-    nodes
+    modalConfig
   };
 };
 
