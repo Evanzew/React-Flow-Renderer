@@ -4,8 +4,6 @@
 
 文章地址：[https://blog.csdn.net/m0_73117087/article/details/133357124](https://blog.csdn.net/m0_73117087/article/details/133357124)
 
-参考文章地址：[https://www.cnblogs.com/wisewrong/p/15638354.html](https://www.cnblogs.com/wisewrong/p/15638354.html)
-
 <br />
 
 ### 启动项目
@@ -23,3 +21,6 @@ yarn & yarn start
 - 3. 自定义每个节点的名字。
 - 4. 增加节点类型树结构。
 - 5. 因为项目内使用的是redux，将`useContext` 改成使用`redux`，按照现在的项目结构，不用使用redux也可以解决，作者只是提供一个解决思路，毕竟项目中遇到的情况会更复杂。
+ 
+
+参考文章地址：[https://www.cnblogs.com/wisewrong/p/15638354.html](https://www.cnblogs.com/wisewrong/p/15638354.html)
